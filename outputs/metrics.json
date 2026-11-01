@@ -1,0 +1,135 @@
+{
+  "data": {
+    "series": "S&P 500 price index, daily close",
+    "start": "1950-01-03",
+    "end": "2018-12-21",
+    "in_sample_days": 12581,
+    "out_of_sample_days": 4774,
+    "cost_bps_per_trade": 5,
+    "buy_hold_sharpe_in_sample": 0.6594538347150068,
+    "buy_hold_sharpe_out_of_sample": 0.1373184745037129
+  },
+  "random_rules": {
+    "n": 1000,
+    "share_positive_in_sample": 0.579,
+    "sharpe_percentiles_5_50_95": [
+      -0.422,
+      0.022,
+      0.189
+    ],
+    "coin_flip_sharpe_percentiles_5_50_95": [
+      -0.273,
+      -0.039,
+      0.196
+    ],
+    "coin_flip_max": 0.45049841786588074,
+    "by_family": {
+      "MA crossover": {
+        "rules": 250,
+        "median_is_sharpe": 0.06306052667513418,
+        "median_oos_sharpe": 0.19300031750370455
+      },
+      "Momentum": {
+        "rules": 250,
+        "median_is_sharpe": 0.09820076087729568,
+        "median_oos_sharpe": 0.09650907626925273
+      },
+      "Mean reversion": {
+        "rules": 250,
+        "median_is_sharpe": -0.15034647643111304,
+        "median_oos_sharpe": 0.05801760184247316
+      },
+      "Breakout": {
+        "rules": 250,
+        "median_is_sharpe": 0.005219642604102936,
+        "median_oos_sharpe": 0.08619826742685019
+      }
+    }
+  },
+  "best_rule": {
+    "rule": "Momentum, 5-day lookback, long/short",
+    "in_sample_sharpe": 0.4993121015617212,
+    "out_of_sample_sharpe": -0.6549697681680111,
+    "out_of_sample_rank_percentile": 0.8
+  },
+  "deflated_sharpe": {
+    "sharpe": 0.031454,
+    "sharpe_annual": 0.499312,
+    "sr0": 0.040675,
+    "sr0_annual": 0.645701,
+    "n_trials": 1000.0,
+    "skew": 1.523814,
+    "kurtosis": 49.723945,
+    "T": 12581,
+    "psr_vs_zero": 0.999836,
+    "dsr": 0.146084
+  },
+  "effective_trials": {
+    "90% of variance": 15,
+    "95% of variance": 49,
+    "Eigenvalues above the noise edge": 24
+  },
+  "dsr_with_effective_trials": {
+    "90% of variance": 0.8566698396289177,
+    "95% of variance": 0.6386424162958427,
+    "Eigenvalues above the noise edge": 0.7784672728309343
+  },
+  "max_trials_to_pass_95": 6,
+  "pbo": {
+    "value": 0.40334110334110335,
+    "splits": 12870,
+    "median_logit": 0.8871017242638457,
+    "mean_is_sharpe_of_winner": 0.3808138286575198,
+    "mean_oos_sharpe_of_winner": 0.03899092252440181
+  },
+  "is_oos_sharpe_correlation": -0.19461024843431082,
+  "top_decile_in_sample": {
+    "median_is": 0.18987834416854768,
+    "median_oos": 0.15392582432612745
+  },
+  "calibration_on_noise": {
+    "simulations": 300,
+    "days": 2520,
+    "rules": 200,
+    "naive_false_positive_rate": 0.6566666666666666,
+    "dsr_false_positive_rate": 0.0,
+    "mean_best_sharpe": 0.6507521862943932,
+    "mean_predicted_max_sharpe": 0.8012344559209942
+  },
+  "own_strategy_200d_ma": {
+    "in_sample": {
+      "sharpe": 0.8369149698007998,
+      "buy_hold_sharpe": 0.6594538347150068,
+      "annual_return": 0.08588507729630206,
+      "buy_hold_annual_return": 0.09387368325691381,
+      "annual_vol": 0.09844741964598197,
+      "buy_hold_vol": 0.13605450970939564,
+      "max_drawdown": -0.18312358747296764,
+      "buy_hold_max_drawdown": -0.48203592814371254,
+      "timing_sharpe": 0.19797022201789116,
+      "share_of_days_invested": 0.7011366346077418,
+      "timing_psr": 0.9184257875463577,
+      "min_track_record_years": 69.4519961416399
+    },
+    "out_of_sample": {
+      "sharpe": 0.20479640128651855,
+      "buy_hold_sharpe": 0.1373184745037129,
+      "annual_return": 0.022291951801520125,
+      "buy_hold_annual_return": 0.02661523924256186,
+      "annual_vol": 0.10764255997397733,
+      "buy_hold_vol": 0.19126679273733144,
+      "max_drawdown": -0.26194650580355827,
+      "buy_hold_max_drawdown": -0.5677538894035719,
+      "timing_sharpe": 0.03634125501305764,
+      "share_of_days_invested": 0.6906158357771262,
+      "timing_psr": 0.5627826230755006,
+      "min_track_record_years": 2052.004412091915
+    }
+  },
+  "ma_grid_best": {
+    "fast": 2,
+    "slow": 217,
+    "in_sample": 0.33689754551866996,
+    "out_of_sample": 0.20117442240459882
+  }
+}

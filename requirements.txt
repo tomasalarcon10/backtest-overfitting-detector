@@ -1,0 +1,6 @@
+pandas>=2.0
+numpy
+scipy
+matplotlib
+plotly>=5.20
+kaleido
